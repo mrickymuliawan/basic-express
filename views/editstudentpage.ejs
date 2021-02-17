@@ -1,0 +1,17 @@
+<h3>edit Student data</h3>
+
+<form method="POST" action="/students/<%= id %>/edit">
+  <p>First name</p>
+  <input type="text" name="first_name" value="<%= first_name %>">
+
+  <p>Last name</p>
+  <input type="text" name="last_name" value="<%= last_name %>"> 
+
+  <p>Email </p>
+  <input type="text" name="email" value="<%= email %>">
+
+  <input type="hidden" name="id" value="<%= id %>">
+
+  <br>
+  <button type="submit">edit student</button>
+</form>

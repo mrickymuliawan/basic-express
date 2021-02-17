@@ -1,0 +1,23 @@
+<h1>teacher page</h1>
+<a href="/students/add">add students</a>
+<table border="1">
+  <tr>
+    <th>First name</th>
+    <th>last name</th>
+    <th>email</th>
+    <th>options</th>
+  </tr>
+  
+  <% data.forEach(function(item) { %>
+    <tr>
+      <td><%= item.first_name %></td>
+      <td><%= item.last_name %></td>
+      <td><%= item.email %></td>
+      <td>
+        <a href="<%= `/students/${item.id}/edit` %>">edit</a>
+        <a href="<%= `/students/${item.id}/delete` %>">delete</a>
+      </td>
+    </tr>
+  <% }) %>
+
+</table>
